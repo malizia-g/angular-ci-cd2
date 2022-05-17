@@ -11,9 +11,12 @@ jobs:
 
       - name: Check running containers
         run: docker ps
+
+      - name: List all filese
+        run: ls
       
       - name: Archive the build folder
         uses: actions/upload-artifact@v3
         with:
           name: builded-app
-          path: app/dist
+          path: foo/dist
